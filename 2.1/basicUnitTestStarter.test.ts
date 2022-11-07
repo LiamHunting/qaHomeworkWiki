@@ -1,28 +1,28 @@
 describe("Testing the calculator", () => {
-    test("Example test", () => {
-      expect(calculator.add(2, 50)).toBe(52);
+  test("Example test", () => {
+    expect(calculator.add(2, 50)).toBe(52);
+  });
+  test("Addition works", () => {
+    expect(calculator.add(5,5)).toBe(10);
+  });
+  test("Subtraction works", () => {
+    expect(calculator.subtract(20,2)).toBe(18);
+  });
+  test("Multiplication works", () => {
+    expect(calculator.multiply(6,6)).toBe(36);
+  });
+  test("Division works", () => {
+    expect(calculator.divide(50,2)).toBe(25);
+  });
+  describe("Stretch Goals", () => {
+    test("(2+2)/4 == 1", () => {
+      expect(calculator.divide(calculator.add(2, 2), 4)).toBe(1);
     });
-    test("Addition works", () => {
-      expect(true).toBeTruthy();
-    });
-    test("Subtraction works", () => {
-      expect(true).toBeTruthy();
-    });
-    test("Multiplication works", () => {
-      expect(true).toBeTruthy();
-    });
-    test("Division works", () => {
-      expect(true).toBeTruthy();
-    });
-    describe("Stretch Goals", () => {
-      test("(2+2)/4 == 1", () => {
-        expect(calculator.divide(calculator.add(2, 2), 4)).toBe(1);
-      });
-      test("(28/4)*(6/2)*(30-27+(3-4)) == 42", () => {
-        expect(true).toBeTruthy();
-      });
+    test("(28/4)*(6/2)*(30-27+(3-4)) == 42", () => {
+      expect(calculator.multiply(calculator.divide(28,4),calculator.multiply(calculator.divide(6,2),calculator.add(30,calculator.add(-27,calculator.add(3,-4)))))).toBe(42);
     });
   });
+});
   
   const calculator = {
     /** Takes two numbers and adds them together.
