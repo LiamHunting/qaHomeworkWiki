@@ -1,6 +1,5 @@
 import {employeeManagerPage} from './emManPage'
 import {Builder, By, Capabilities, until, WebDriver, } from "selenium-webdriver";
-  const chromedriver = require("chromedriver");
 
   const driver: WebDriver = new Builder()
   .withCapabilities(Capabilities.chrome())
