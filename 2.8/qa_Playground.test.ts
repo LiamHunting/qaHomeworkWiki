@@ -32,7 +32,7 @@ class Animal {
     habitat(): string {
         return `The ${this.name} is a ${this.saltwater ? "saltwater" : "freshwater"} fish.`;
     };
- }
+ };
   
   /**
   * Bird extends Animal, but takes an additional property, and has an additional method, fly().
